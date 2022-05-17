@@ -1,5 +1,5 @@
 import { SizeUnit } from "../Constants/Template";
-import { getSize } from "./getSize";
+import getSize from "./getSize";
 
 const conversionUnits = {
   mm: 2.8346456693,
@@ -17,7 +17,7 @@ const unitConversions = {
   pixel: "px",
 };
 
-export default function convertUnitsToSize(size: number | string, unit: SizeUnit = SizeUnit.POINT) {
+export default function convertUnitToSize(size: number | string, unit: SizeUnit = SizeUnit.POINT) {
   if (size === "auto") {
     return "auto";
   }
@@ -29,11 +29,4 @@ export default function convertUnitsToSize(size: number | string, unit: SizeUnit
   }
 
   return getSize(size) * conversionUnits[unit];
-}
-
-export function convertUnitsToPageSize(width, height, unit: SizeUnit = SizeUnit.POINT) {
-  return {
-    width: convertUnitsToSize(width, unit),
-    height: convertUnitsToSize(height, unit),
-  };
 }

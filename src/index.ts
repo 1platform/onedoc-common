@@ -1,28 +1,34 @@
 export * from "./Constants/Content";
-export * from "./Constants/StandardPageSizes";
-export * from "./Constants/SupportedPageSize";
+import StandardPageSizes from "./Constants/StandardPageSizes";
+import SupportedPageSize from "./Constants/SupportedPageSize";
+
 export * from "./Constants/Template";
 
-export * from "./Utils/getFontConfig";
-export * from "./Utils/convertUnitsToSize";
-export * from "./Utils/getAlignment";
-export * from "./Utils/getColor";
-export * from "./Utils/getSize";
-export * from "./Utils/normalizeMargins";
-export * from "./Utils/getFontMapping";
-export * from "./Utils/getPageMargins";
-export * from "./Utils/handleText";
+export * as convertUnitsToPageSize from "./Utils/convertUnitsToPageSize";
+export * as convertUnitToSize from "./Utils/convertUnitToSize";
+import getColor, { toHexColor } from "./Utils/getColor";
 
-export * from "./Document/Content/IColumn";
-export * from "./Document/Content/IContent";
-export * from "./Document/Content/IImage";
-export * from "./Document/Content/ILink";
-export * from "./Document/Content/IQRCode";
-export * from "./Document/Content/ITable";
-export * from "./Document/Content/ITableCell";
-export * from "./Document/Generics";
-export * from "./Document/IDocumentSettings";
-export * from "./Document/IMetadata";
-export * from "./Document/IPageHeaderFooter";
-export * from "./Document/IPageSettings";
-export * from "./Document/ITemplate";
+export * as getSize from "./Utils/getSize";
+export * as getImageSize from "./Utils/getImageSize";
+export * as normalizeMargins from "./Utils/normalizeMargins";
+export * as getPageMargins from "./Utils/getPageMargins";
+export * as handleText from "./Utils/handleText";
+
+export * as IColumn from "./Document/Content/IColumn";
+export * as IContent from "./Document/Content/IContent";
+export * as IImage from "./Document/Content/IImage";
+export * as ILink from "./Document/Content/ILink";
+export * as IQRCode from "./Document/Content/IQRCode";
+export * as ITable from "./Document/Content/ITable";
+export * as ITableCell from "./Document/Content/ITableCell";
+import { ISize, IMarginBox, IMarginAxis, IFontSettings } from "./Document/Generics";
+
+export * as IDocumentSettings from "./Document/IDocumentSettings";
+export * as IMetadata from "./Document/IMetadata";
+export * as IPageHeaderFooter from "./Document/IPageHeaderFooter";
+export * as IPageSettings from "./Document/IPageSettings";
+export * as ITemplate from "./Document/ITemplate";
+
+export { StandardPageSizes, SupportedPageSize, getColor, toHexColor };
+
+export type { ISize, IMarginBox, IMarginAxis, IFontSettings };

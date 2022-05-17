@@ -3,11 +3,64 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var _exportNames = {
+  StandardPageSizes: true,
+  SupportedPageSize: true,
+  convertUnitsToPageSize: true,
+  convertUnitToSize: true,
+  getColor: true,
+  toHexColor: true,
+  getSize: true,
+  getImageSize: true,
+  normalizeMargins: true,
+  getPageMargins: true,
+  handleText: true,
+  IColumn: true,
+  IContent: true,
+  IImage: true,
+  ILink: true,
+  IQRCode: true,
+  ITable: true,
+  ITableCell: true,
+  IDocumentSettings: true,
+  IMetadata: true,
+  IPageHeaderFooter: true,
+  IPageSettings: true,
+  ITemplate: true
+};
+exports.ITemplate = exports.ITableCell = exports.ITable = exports.IQRCode = exports.IPageSettings = exports.IPageHeaderFooter = exports.IMetadata = exports.ILink = exports.IImage = exports.IDocumentSettings = exports.IContent = exports.IColumn = void 0;
+Object.defineProperty(exports, "StandardPageSizes", {
+  enumerable: true,
+  get: function () {
+    return _StandardPageSizes.default;
+  }
+});
+Object.defineProperty(exports, "SupportedPageSize", {
+  enumerable: true,
+  get: function () {
+    return _SupportedPageSize.default;
+  }
+});
+exports.convertUnitsToPageSize = exports.convertUnitToSize = void 0;
+Object.defineProperty(exports, "getColor", {
+  enumerable: true,
+  get: function () {
+    return _getColor.default;
+  }
+});
+exports.normalizeMargins = exports.handleText = exports.getSize = exports.getPageMargins = exports.getImageSize = void 0;
+Object.defineProperty(exports, "toHexColor", {
+  enumerable: true,
+  get: function () {
+    return _getColor.toHexColor;
+  }
+});
 
 var _Content = require("./Constants/Content");
 
 Object.keys(_Content).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
   if (key in exports && exports[key] === _Content[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
@@ -17,36 +70,15 @@ Object.keys(_Content).forEach(function (key) {
   });
 });
 
-var _StandardPageSizes = require("./Constants/StandardPageSizes");
+var _StandardPageSizes = _interopRequireDefault(require("./Constants/StandardPageSizes"));
 
-Object.keys(_StandardPageSizes).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _StandardPageSizes[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _StandardPageSizes[key];
-    }
-  });
-});
-
-var _SupportedPageSize = require("./Constants/SupportedPageSize");
-
-Object.keys(_SupportedPageSize).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _SupportedPageSize[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _SupportedPageSize[key];
-    }
-  });
-});
+var _SupportedPageSize = _interopRequireDefault(require("./Constants/SupportedPageSize"));
 
 var _Template = require("./Constants/Template");
 
 Object.keys(_Template).forEach(function (key) {
   if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
   if (key in exports && exports[key] === _Template[key]) return;
   Object.defineProperty(exports, key, {
     enumerable: true,
@@ -56,288 +88,86 @@ Object.keys(_Template).forEach(function (key) {
   });
 });
 
-var _getFontConfig = require("./Utils/getFontConfig");
+var _convertUnitsToPageSize = _interopRequireWildcard(require("./Utils/convertUnitsToPageSize"));
 
-Object.keys(_getFontConfig).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _getFontConfig[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getFontConfig[key];
-    }
-  });
-});
+exports.convertUnitsToPageSize = _convertUnitsToPageSize;
 
-var _convertUnitsToSize = require("./Utils/convertUnitsToSize");
+var _convertUnitToSize = _interopRequireWildcard(require("./Utils/convertUnitToSize"));
 
-Object.keys(_convertUnitsToSize).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _convertUnitsToSize[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _convertUnitsToSize[key];
-    }
-  });
-});
+exports.convertUnitToSize = _convertUnitToSize;
 
-var _getAlignment = require("./Utils/getAlignment");
+var _getColor = _interopRequireWildcard(require("./Utils/getColor"));
 
-Object.keys(_getAlignment).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _getAlignment[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getAlignment[key];
-    }
-  });
-});
+var _getSize = _interopRequireWildcard(require("./Utils/getSize"));
 
-var _getColor = require("./Utils/getColor");
+exports.getSize = _getSize;
 
-Object.keys(_getColor).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _getColor[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getColor[key];
-    }
-  });
-});
+var _getImageSize = _interopRequireWildcard(require("./Utils/getImageSize"));
 
-var _getSize = require("./Utils/getSize");
+exports.getImageSize = _getImageSize;
 
-Object.keys(_getSize).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _getSize[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getSize[key];
-    }
-  });
-});
+var _normalizeMargins = _interopRequireWildcard(require("./Utils/normalizeMargins"));
 
-var _normalizeMargins = require("./Utils/normalizeMargins");
+exports.normalizeMargins = _normalizeMargins;
 
-Object.keys(_normalizeMargins).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _normalizeMargins[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _normalizeMargins[key];
-    }
-  });
-});
+var _getPageMargins = _interopRequireWildcard(require("./Utils/getPageMargins"));
 
-var _getFontMapping = require("./Utils/getFontMapping");
+exports.getPageMargins = _getPageMargins;
 
-Object.keys(_getFontMapping).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _getFontMapping[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getFontMapping[key];
-    }
-  });
-});
+var _handleText = _interopRequireWildcard(require("./Utils/handleText"));
 
-var _getPageMargins = require("./Utils/getPageMargins");
+exports.handleText = _handleText;
 
-Object.keys(_getPageMargins).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _getPageMargins[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _getPageMargins[key];
-    }
-  });
-});
+var _IColumn = _interopRequireWildcard(require("./Document/Content/IColumn"));
 
-var _handleText = require("./Utils/handleText");
+exports.IColumn = _IColumn;
 
-Object.keys(_handleText).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _handleText[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _handleText[key];
-    }
-  });
-});
+var _IContent = _interopRequireWildcard(require("./Document/Content/IContent"));
 
-var _IColumn = require("./Document/Content/IColumn");
+exports.IContent = _IContent;
 
-Object.keys(_IColumn).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IColumn[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IColumn[key];
-    }
-  });
-});
+var _IImage = _interopRequireWildcard(require("./Document/Content/IImage"));
 
-var _IContent = require("./Document/Content/IContent");
+exports.IImage = _IImage;
 
-Object.keys(_IContent).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IContent[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IContent[key];
-    }
-  });
-});
+var _ILink = _interopRequireWildcard(require("./Document/Content/ILink"));
 
-var _IImage = require("./Document/Content/IImage");
+exports.ILink = _ILink;
 
-Object.keys(_IImage).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IImage[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IImage[key];
-    }
-  });
-});
+var _IQRCode = _interopRequireWildcard(require("./Document/Content/IQRCode"));
 
-var _ILink = require("./Document/Content/ILink");
+exports.IQRCode = _IQRCode;
 
-Object.keys(_ILink).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ILink[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _ILink[key];
-    }
-  });
-});
+var _ITable = _interopRequireWildcard(require("./Document/Content/ITable"));
 
-var _IQRCode = require("./Document/Content/IQRCode");
+exports.ITable = _ITable;
 
-Object.keys(_IQRCode).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IQRCode[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IQRCode[key];
-    }
-  });
-});
+var _ITableCell = _interopRequireWildcard(require("./Document/Content/ITableCell"));
 
-var _ITable = require("./Document/Content/ITable");
+exports.ITableCell = _ITableCell;
 
-Object.keys(_ITable).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ITable[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _ITable[key];
-    }
-  });
-});
+var _IDocumentSettings = _interopRequireWildcard(require("./Document/IDocumentSettings"));
 
-var _ITableCell = require("./Document/Content/ITableCell");
+exports.IDocumentSettings = _IDocumentSettings;
 
-Object.keys(_ITableCell).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ITableCell[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _ITableCell[key];
-    }
-  });
-});
+var _IMetadata = _interopRequireWildcard(require("./Document/IMetadata"));
 
-var _Generics = require("./Document/Generics");
+exports.IMetadata = _IMetadata;
 
-Object.keys(_Generics).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _Generics[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _Generics[key];
-    }
-  });
-});
+var _IPageHeaderFooter = _interopRequireWildcard(require("./Document/IPageHeaderFooter"));
 
-var _IDocumentSettings = require("./Document/IDocumentSettings");
+exports.IPageHeaderFooter = _IPageHeaderFooter;
 
-Object.keys(_IDocumentSettings).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IDocumentSettings[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IDocumentSettings[key];
-    }
-  });
-});
+var _IPageSettings = _interopRequireWildcard(require("./Document/IPageSettings"));
 
-var _IMetadata = require("./Document/IMetadata");
+exports.IPageSettings = _IPageSettings;
 
-Object.keys(_IMetadata).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IMetadata[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IMetadata[key];
-    }
-  });
-});
+var _ITemplate = _interopRequireWildcard(require("./Document/ITemplate"));
 
-var _IPageHeaderFooter = require("./Document/IPageHeaderFooter");
+exports.ITemplate = _ITemplate;
 
-Object.keys(_IPageHeaderFooter).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IPageHeaderFooter[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IPageHeaderFooter[key];
-    }
-  });
-});
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-var _IPageSettings = require("./Document/IPageSettings");
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-Object.keys(_IPageSettings).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _IPageSettings[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _IPageSettings[key];
-    }
-  });
-});
-
-var _ITemplate = require("./Document/ITemplate");
-
-Object.keys(_ITemplate).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ITemplate[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _ITemplate[key];
-    }
-  });
-});
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
