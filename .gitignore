@@ -149,7 +149,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -361,9 +360,6 @@ $RECYCLE.BIN/
 .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,node,yarn,git,visualstudiocode,webstorm
-
-/dist
-/build
 
 # Editor directories and files
 .idea
