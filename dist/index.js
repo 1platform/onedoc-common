@@ -28,14 +28,54 @@ Object.defineProperty(exports, "SupportedPageSize", {
     return _SupportedPageSize.default;
   }
 });
-exports.convertUnitsToPageSize = exports.convertUnitToSize = void 0;
+Object.defineProperty(exports, "convertUnitToSize", {
+  enumerable: true,
+  get: function () {
+    return _convertUnitToSize.default;
+  }
+});
+Object.defineProperty(exports, "convertUnitsToPageSize", {
+  enumerable: true,
+  get: function () {
+    return _convertUnitsToPageSize.default;
+  }
+});
 Object.defineProperty(exports, "getColor", {
   enumerable: true,
   get: function () {
     return _getColor.default;
   }
 });
-exports.normalizeMargins = exports.handleText = exports.getSize = exports.getPageMargins = exports.getImageSize = void 0;
+Object.defineProperty(exports, "getImageSize", {
+  enumerable: true,
+  get: function () {
+    return _getImageSize.default;
+  }
+});
+Object.defineProperty(exports, "getPageMargins", {
+  enumerable: true,
+  get: function () {
+    return _getPageMargins.default;
+  }
+});
+Object.defineProperty(exports, "getSize", {
+  enumerable: true,
+  get: function () {
+    return _getSize.default;
+  }
+});
+Object.defineProperty(exports, "handleText", {
+  enumerable: true,
+  get: function () {
+    return _handleText.default;
+  }
+});
+Object.defineProperty(exports, "normalizeMargins", {
+  enumerable: true,
+  get: function () {
+    return _normalizeMargins.default;
+  }
+});
 Object.defineProperty(exports, "toHexColor", {
   enumerable: true,
   get: function () {
@@ -75,35 +115,21 @@ Object.keys(_Template).forEach(function (key) {
   });
 });
 
-var _convertUnitsToPageSize = _interopRequireWildcard(require("./Utils/convertUnitsToPageSize"));
+var _convertUnitsToPageSize = _interopRequireDefault(require("./Utils/convertUnitsToPageSize"));
 
-exports.convertUnitsToPageSize = _convertUnitsToPageSize;
-
-var _convertUnitToSize = _interopRequireWildcard(require("./Utils/convertUnitToSize"));
-
-exports.convertUnitToSize = _convertUnitToSize;
+var _convertUnitToSize = _interopRequireDefault(require("./Utils/convertUnitToSize"));
 
 var _getColor = _interopRequireWildcard(require("./Utils/getColor"));
 
-var _getSize = _interopRequireWildcard(require("./Utils/getSize"));
+var _getSize = _interopRequireDefault(require("./Utils/getSize"));
 
-exports.getSize = _getSize;
+var _getImageSize = _interopRequireDefault(require("./Utils/getImageSize"));
 
-var _getImageSize = _interopRequireWildcard(require("./Utils/getImageSize"));
+var _normalizeMargins = _interopRequireDefault(require("./Utils/normalizeMargins"));
 
-exports.getImageSize = _getImageSize;
+var _getPageMargins = _interopRequireDefault(require("./Utils/getPageMargins"));
 
-var _normalizeMargins = _interopRequireWildcard(require("./Utils/normalizeMargins"));
-
-exports.normalizeMargins = _normalizeMargins;
-
-var _getPageMargins = _interopRequireWildcard(require("./Utils/getPageMargins"));
-
-exports.getPageMargins = _getPageMargins;
-
-var _handleText = _interopRequireWildcard(require("./Utils/handleText"));
-
-exports.handleText = _handleText;
+var _handleText = _interopRequireDefault(require("./Utils/handleText"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
