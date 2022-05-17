@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sprkdev/onedoc-common.git"
+    "url": "git+https://github.com/1platform/onedoc-common.git"
   },
   "author": "Valentin Duricu <valentin@sprk.dev>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sprkdev/onedoc-common/issues"
+    "url": "https://github.com/1platform/onedoc-common/issues"
   },
-  "homepage": "https://github.com/sprkdev/onedoc-common#readme",
+  "homepage": "https://github.com/1platform/onedoc-common#readme",
   "dependencies": {
     "lodash": "^4.17.21",
     "luxon": "^2.3.2",
