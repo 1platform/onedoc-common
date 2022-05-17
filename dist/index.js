@@ -160,6 +160,19 @@ Object.keys(_getPageMargins).forEach(function (key) {
   });
 });
 
+var _handleText = require("./Utils/handleText");
+
+Object.keys(_handleText).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _handleText[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _handleText[key];
+    }
+  });
+});
+
 var _IColumn = require("./Document/Content/IColumn");
 
 Object.keys(_IColumn).forEach(function (key) {

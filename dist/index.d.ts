@@ -10,6 +10,7 @@ export * from "./Utils/getSize";
 export * from "./Utils/normalizeMargins";
 export * from "./Utils/getFontMapping";
 export * from "./Utils/getPageMargins";
+export * from "./Utils/handleText";
 export * from "./Document/Content/IColumn";
 export * from "./Document/Content/IContent";
 export * from "./Document/Content/IImage";
