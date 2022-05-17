@@ -14,21 +14,8 @@ var _exportNames = {
   getImageSize: true,
   normalizeMargins: true,
   getPageMargins: true,
-  handleText: true,
-  IColumn: true,
-  IContent: true,
-  IImage: true,
-  ILink: true,
-  IQRCode: true,
-  ITable: true,
-  ITableCell: true,
-  IDocumentSettings: true,
-  IMetadata: true,
-  IPageHeaderFooter: true,
-  IPageSettings: true,
-  ITemplate: true
+  handleText: true
 };
-exports.ITemplate = exports.ITableCell = exports.ITable = exports.IQRCode = exports.IPageSettings = exports.IPageHeaderFooter = exports.IMetadata = exports.ILink = exports.IImage = exports.IDocumentSettings = exports.IContent = exports.IColumn = void 0;
 Object.defineProperty(exports, "StandardPageSizes", {
   enumerable: true,
   get: function () {
@@ -117,54 +104,6 @@ exports.getPageMargins = _getPageMargins;
 var _handleText = _interopRequireWildcard(require("./Utils/handleText"));
 
 exports.handleText = _handleText;
-
-var _IColumn = _interopRequireWildcard(require("./Document/Content/IColumn"));
-
-exports.IColumn = _IColumn;
-
-var _IContent = _interopRequireWildcard(require("./Document/Content/IContent"));
-
-exports.IContent = _IContent;
-
-var _IImage = _interopRequireWildcard(require("./Document/Content/IImage"));
-
-exports.IImage = _IImage;
-
-var _ILink = _interopRequireWildcard(require("./Document/Content/ILink"));
-
-exports.ILink = _ILink;
-
-var _IQRCode = _interopRequireWildcard(require("./Document/Content/IQRCode"));
-
-exports.IQRCode = _IQRCode;
-
-var _ITable = _interopRequireWildcard(require("./Document/Content/ITable"));
-
-exports.ITable = _ITable;
-
-var _ITableCell = _interopRequireWildcard(require("./Document/Content/ITableCell"));
-
-exports.ITableCell = _ITableCell;
-
-var _IDocumentSettings = _interopRequireWildcard(require("./Document/IDocumentSettings"));
-
-exports.IDocumentSettings = _IDocumentSettings;
-
-var _IMetadata = _interopRequireWildcard(require("./Document/IMetadata"));
-
-exports.IMetadata = _IMetadata;
-
-var _IPageHeaderFooter = _interopRequireWildcard(require("./Document/IPageHeaderFooter"));
-
-exports.IPageHeaderFooter = _IPageHeaderFooter;
-
-var _IPageSettings = _interopRequireWildcard(require("./Document/IPageSettings"));
-
-exports.IPageSettings = _IPageSettings;
-
-var _ITemplate = _interopRequireWildcard(require("./Document/ITemplate"));
-
-exports.ITemplate = _ITemplate;
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
