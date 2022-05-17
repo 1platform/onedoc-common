@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "description": "Documents generator common elements",
+  "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint --max-warnings 0 \"./src/**/*.ts\"",
     "lint:fix": "eslint --max-warnings 0 --fix \"./src/**/*.ts\"",
